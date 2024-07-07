@@ -4,7 +4,7 @@
 
         protected function conexionBDmySQL() {
             //in this case the conexion using is with value in local using a settings.ini like document with variables conexion, you can chage with credential with your server usually need to use a .env doc
-            $_SETTINGS = parse_ini_file('./settings.ini', true);
+            //$_SETTINGS = parse_ini_file('./settings.ini', true);
             $server="localhost";
             $user = "root";
             $pass = "";

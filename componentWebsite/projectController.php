@@ -1,34 +1,25 @@
 <?php
-//require_once './projectModel.php';
+include_once './componentWebsite/projectModel.php';
+class projectControllerTable
+{
 
-class projectControllerTable{
-    public static function getTableController(){
+    public function getTableController()
+    {
         try {
             $getTable = projectModelBD::getTableProjectPublic();
 
             if ($getTable) {
-                echo '<table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">link</th>
-                            </tr>
-                        </thead>
-                        <tbody>';
-                         foreach ($getTable as $key => $value) {
-                           echo ' <tr>
-                            <td>'.$value["nameProject"].'</td>
-                            <td>'.$value["descriptionProject"].'</td>
-                            <td><a href='.$value["linkProject"].'> Click Here </a></td>
+                foreach ($getTable as $key => $value) {
+                    echo ' <tr>
+                            <td>' . $value["nameProject"] . '</td>
+                            <td>' . $value["descriptionProject"] . '</td>
+                            <td><a href=' . $value["linkProject"] . ' target="_blank"> Click Here </a></td>
                             </tr>';
-                         }
-                        echo '</tbody>
-                    </table>';
+                }
             }
         } catch (\Throwable $th) {
             //throw $th;
+            echo 'error ' . $th;
         }
     }
 }
-?>
