@@ -17,10 +17,14 @@
 
 <body>
     <?php
+    //ask if the variable ruta exist
     if (isset($_GET["ruta"])) {
+        // ask if variable ruta have some of this values include in the variable and if exist
         if ($_GET["ruta"] == "default" || $_GET["ruta"] == "contact" || $_GET["ruta"] == "project") {
+                // complete the path with the next instruction example ./componentWebsite/Page/default.php
             include_once './componentWebsite/Page/' . $_GET["ruta"] . '.php';
         } else {
+                // else ruta not exist print text 404 page not found
             echo '<h1 class="display-1 text-center">404 Page not found<h1>';
         }
     }
@@ -28,6 +32,7 @@
 </body>
 
 <footer>
+    // this is the same instruction to include content to other document php.
     <?php include_once './componentWebsite/footer.php' ?>
 </footer>
 <!--js to load PDF. PDF.js load and display-->

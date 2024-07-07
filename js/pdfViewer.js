@@ -1,7 +1,7 @@
 //js to load PDF
         // PDF.js load and display
         const pdfViewer = document.getElementById('pdf-viewer');
-        const pdfUrl = 'https://iancalbreath.com/ICalbreathPro.pdf';
+        const pdfUrl = 'resource/ICalbreathPro.pdf';
         // Initialize PDF.js
         pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
             pdf.getPage(1).then(page => {
