@@ -4,8 +4,8 @@ class projectModelBD extends conexionBD{
 
     private static function getTableProject(){
         try {
-            $query = 'SELECT nameProject, descriptionProject, linkProject FROM tblproject';
-            $queryBD = conexionBD::conexion()->prepare($query);
+            $query = parse_ini_file('./settings.ini',true);
+            $queryBD = conexionBD::conexion()->prepare($query['con']['query']);
             $queryBD->execute();
             return $queryBD->fetchAll();
         
@@ -18,7 +18,7 @@ class projectModelBD extends conexionBD{
         try {
             $askModelGetTableProject = ProjectModelBD::getTableProject();
             return $askModelGetTableProject;
-        } catch (\Throwable $th) {
+        } catch (\Throwable) {
             //throw $th;
             die('error consultar datos, getTablePublic');
         }

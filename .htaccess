@@ -1,0 +1,5 @@
+Options All -Indexes
+
+RewriteEngine On
+
+RewriteRule ^([a-zA-Z]+)$ index.php?ruta=$1
