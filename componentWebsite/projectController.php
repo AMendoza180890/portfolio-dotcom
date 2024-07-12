@@ -2,7 +2,6 @@
 include_once './componentWebsite/projectModel.php';
 class projectControllerTable
 {
-
     public function getTableController()
     {
         try {
@@ -17,9 +16,8 @@ class projectControllerTable
                             </tr>';
                 }
             }
-        } catch (\Throwable $th) {
-            //throw $th;
-            echo 'error ' . $th;
+        } catch (\Throwable) {
+            die('It was impossible to load data in the table');
         }
     }
 }

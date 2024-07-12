@@ -19,7 +19,7 @@ error_reporting(0);
                 $bd -> exec("set names utf8");
                 return $bd;
             } catch (\Throwable) {
-                die('If you see this message, send a email to joedoe@example.com');
+                die('If you see this message, send email to joedoe@example.com');
             }
         }
         // This is a public method that we can used to connect with other part of the project
