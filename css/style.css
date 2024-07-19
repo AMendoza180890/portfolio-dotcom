@@ -14,6 +14,19 @@
     margin: 0 10px;
 }
 
+.imgNoBackground {
+    mask-image: linear-gradient(white 30%, transparent);
+}
+
+.iconSocialMedia{
+    mix-blend-mode: multiply;
+}
+
+.enLinea{
+    display: inline-flex;
+    gap: 10%;
+}
+
 /*pruebas*/
 article{
     display: flex;

@@ -16,7 +16,7 @@
 <div class="container">
                    <div class="row home-detail">
                       <div class="col-md-5 animated bounceInLeft hom-img">
-                          <img src="assets/images/name.png" alt="">
+                          <img src="img/ianPictureSinfondo.png " alt="Ian Picture" id="imgNoBackground" class="imgNoBackground">
                       </div>
                         <!-- personal information and link-->
                       <?php
@@ -28,7 +28,7 @@
                            <span>Professional <a >'.$informationGeneral["info"]["role"].'</a> </span>
                            <p>'.$informationGeneral["info"]["sumary"].'</p>
                            
-                           <ul class="socil-icon">
+                           <ul class="enLinea">
                                 <li>
                                     <a href="'.$informationGeneral["link"]["facebook"].'"><i class="fab fa-facebook-f"></i></a>
                                 </li>
